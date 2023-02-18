@@ -8,6 +8,16 @@ export class AuthService {
 
   constructor(public auth: AngularFireAuth) { }
 
+  initAuthListener() {
+    this.auth.authState.subscribe(fuser => {
+      console.log(fuser);
+      console.log(fuser?.uid);
+      console.log(fuser?.email);
+
+      return fuser;
+    })
+  }
+
   crearUsuario(nombre: string, correo: string, password: string) {
     console.log(nombre, correo, password);
     return this.auth.signInWithEmailAndPassword(correo, password);
