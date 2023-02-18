@@ -18,7 +18,7 @@
                 />
                 <div class="input-group-append">
                   <span class="input-group-text">
-                    <i class="fa fa-check-circle"></i>
+                    <i *ngIf="registroForm.get('nombre')?.valid" class="fa fa-check-circle text-success"></i>
                   </span>
                 </div>
               </div>
@@ -35,7 +35,7 @@
                 />
                 <div class="input-group-append">
                   <span class="input-group-text">
-                    <i class="fa fa-check-circle"></i>
+                    <i *ngIf="registroForm.get('correo')?.valid" class="fa fa-check-circle text-success"></i>
                   </span>
                 </div>
               </div>
@@ -52,7 +52,7 @@
                 />
                 <div class="input-group-append">
                   <span class="input-group-text">
-                    <i class="fa fa-check-circle"></i>
+                    <i *ngIf="registroForm.get('password')?.valid" class="fa fa-check-circle text-success"></i>
                   </span>
                 </div>
               </div>
